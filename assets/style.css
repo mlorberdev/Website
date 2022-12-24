@@ -1,0 +1,40 @@
+@font-face {
+  font-family: mod;
+  src: url(./ModernSans-Light.otf);
+}
+:root {
+  --blue: #010c52ff;
+  --gray: #ffffff22;
+  --text: white;
+  --bg: black;
+}
+html {
+  background-color:var(--bg);
+  box-sizing: border-box;
+}
+body {
+  position:fixed;
+  top:0;
+  left:0;
+  margin:0;
+}
+* {
+  border: 1px solid #ffffff11;
+  font-family:mod;
+}
+footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100vw;
+  height:fit-content;
+  padding:.5rem;
+  background-color: var(--bg);
+
+}
+input[type=text] {
+  background:transparent;
+  color:var(--text);
+  border-radius:2rem;
+  padding:1rem;
+}
