@@ -6,12 +6,13 @@
 :root {
   --blue: #010c52ff;
   --gray: lightgray;
-  --text: white;
-  --bg: black;
+  --dark: #111;
+  --lite: #eee;
+  --white:white;
+  --black: black;
 }
 
 html {
-  background-color: var(--bg);
   box-sizing: border-box;
 }
 
@@ -20,6 +21,9 @@ body {
   top: 0;
   left: 0;
   margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black);
 }
 
 * {
@@ -32,7 +36,6 @@ footer {
   bottom: 0;
   width: 100vw;
   height: 10vh;
-  background-color: var(--bg);
   display: flex;
   align-items: center;
   justify-content: right;
@@ -40,7 +43,7 @@ footer {
 
 input[type=text] {
   background: transparent;
-  color: var(--text);
+  color: var(--white);
   border-radius: 2rem;
   padding: 1rem;
 }
@@ -58,6 +61,12 @@ main {
   padding: .25rem;
 }
 
+main::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 article {
   width: 97vw;
 }
@@ -65,8 +74,20 @@ article {
 #msg {
   margin: 0 1rem;
   width: 60vw;
+  color:var(--white);
+}
+.msg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 85vw;
+  margin-bottom:1px;
 }
 
+.msg>img {
+  width: 3rem;
+  height: 3rem;
+}
 #sms-marker {
   /* width:100vw; */
   height: 2.5vh;
@@ -84,7 +105,7 @@ article {
 .texting {
   width: .5vh;
   height: .5vh;
-  background-color: var(--text);
+  background-color: var(--white);
   border-radius: 50%;
   margin: 0 .25rem;
   animation: texting 1s linear infinite;
@@ -124,35 +145,50 @@ article {
   display: none;
 }
 
-.msg {
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-  max-width: 85vw;
-}
-
-.msg>img {
-  width: 3rem;
-  height: 3rem;
-}
-
 .txt {
   background-color: var(--blue);
-  color: var(--text);
+  color: var(--white);
   padding: 1rem;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   width: fit-content;
-  margin-left:.7rem;
+  margin-left: .7rem;
 }
+
 sup {
-  font-size:.4rem;
+  font-size: .4rem;
 }
-a {
-  color:var(--text);
-}
+
+a,
 a:visited {
-  color:rgb(12, 217, 224);
+  color: rgb(12, 217, 224);
+}
+
+#settings {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  /* animation:settings 7s linear infinite; */
+}
+.settings {
+  fill:white;
+}
+/* @keyframes settings {
+  0% {transform:none;}
+  10% {transform:none;}
+  15% {transform:rotate(360deg)}
+  20% {transform:none;}
+  80% {transform:none;}
+  82% {transform:scale(.3);}
+  84% {transform:none;}
+} */
+#settings-opt {
+  position:fixed;
+  top:0;
+  right:0;
+  width:fit-content;
+  height:fit-content;
 }

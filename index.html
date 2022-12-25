@@ -6,7 +6,7 @@
     <title>Matt Lorber | Developer</title>
     <link rel="stylesheet" href="./assets/style.css"/>
   </head>
-  <body>
+  <body>    
     <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <g id="avatar">
@@ -56,7 +56,17 @@
         </g>
       </defs>
     </svg>
+    
     <main>
+      <svg id="settings" viewBox="0 0 24 24" width="1rem" height="1rem" xmlns="http://www.w3.org/2000/svg">
+        <path class="settings" d="M19,8H5A1,1,0,0,1,5,6H19a1,1,0,0,1,0,2Z"/>
+        <path class="settings" d="M19,13H5a1,1,0,0,1,0-2H19a1,1,0,0,1,0,2Z"/>
+        <path class="settings" d="M19,18H5a1,1,0,0,1,0-2H19a1,1,0,0,1,0,2Z"/>
+      </svg>
+      <div id="settings-opt">
+        <div id="DARK">DARK</div>
+        <div id="LIGHT">LIGHT</div>
+      </div>
       <article>
         <div class="msg">
           <svg width="3rem" height="3rem" viewBox="0 0 512 512">
@@ -87,7 +97,7 @@
             <use xlink:href="#avatar" />
           </svg>
           <span class="txt">
-            <span><a href="https://wrdl-with-restful-api.netlify.app/" target="_blank">Wordle<sup>TM</sup> Clone</a> 🔗❔</span>
+            <span><a href="https://wrdl-with-restful-api.netlify.app/" target="_blank">Wordle<sup>TM</sup> Clone</a> 🔗↗️</span>
           </span>
         </div>
         <div class="msg">
@@ -106,7 +116,13 @@
           <svg width="3rem" height="3rem" viewBox="0 0 512 512">
             <use xlink:href="#avatar" />
           </svg>
-          <span class="txt">Or find me on <a href="" target="_blank">LinkedIn</a> 🫱‍🫲🏾</span>
+          <span class="txt">Or find me on <a href="https://www.linkedin.com/in/matthew-lorber" target="_blank">LinkedIn</a></span>
+        </div>
+        <div class="msg">
+          <svg width="3rem" height="3rem" viewBox="0 0 512 512">
+            <use xlink:href="#avatar" />
+          </svg>
+          <span class="txt">You can also <a href="mailto:mlorber.tch@gmail.com">msg</a> me 🫱‍🫲🏾✉️</span>
         </div>
         <div class="msg">
           <svg width="3rem" height="3rem" viewBox="0 0 512 512">
@@ -124,7 +140,7 @@
       </section>
     </article>
     <footer>
-      <input id="msg" type="text" value="Chat message"/>
+      <input id="msg" type="text" placeholder="Chat message"/>
     </footer>
   </body>
   <script src="./assets/main.js"></script>
