@@ -3,7 +3,7 @@
   const txt = document.querySelectorAll(".txt");
   const sms = document.getElementById("sms-marker");
   const now = document.getElementById("now");
-  const ttt = [2, 5, 9, 15, 19, 29, 33, 37, 41, 45, 50, 57]; // msg timings (s)
+  const ttt = [2, 5, 9, 15, 19, 29, 38, 43, 47, 55, 60, 67]; // msg timings (s)
   const www = [1.2, 1.4, 2.5, 1.2, 2.4, 3.6, 2.1, 2, 1, 1.7, 2.3, 1.7];
 
   for (let i = 0; i < 12; i++) {

@@ -77,17 +77,18 @@ footer {
 main {
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
   position: fixed;
-  bottom: 17.5vh;
+  bottom: 20vh;
   left: 0;
   width: 100vw;
   height: fit-content;
   padding: .25rem .25rem 2rem .25rem;
+  z-index:-1;
 }
 
-main::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -95,8 +96,9 @@ main::-webkit-scrollbar {
 
 article {
   width: 97vw;
+  height:fit-content;
+  overflow-y:scroll;
 }
-
 .msg {
   display: none;
   flex-direction: row;
@@ -119,9 +121,9 @@ article {
 }
 
 #sms-marker {
-  height: 2.5vh;
+  height: fit-content;
   position: fixed;
-  bottom: 12.5vh;
+  bottom: 10.5vh;
   display: flex;
   align-items: center;
 }
