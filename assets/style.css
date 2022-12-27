@@ -8,7 +8,7 @@
   --gray: lightgray;
   --dark: #111;
   --lite: #eee;
-  --white:white;
+  --white: white;
   --black: black;
 }
 
@@ -32,8 +32,9 @@ body {
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
+  right: 0;
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -41,11 +42,36 @@ footer {
   justify-content: right;
 }
 
-input[type=text] {
+#msg {
   background: transparent;
   color: var(--white);
   border-radius: 2rem;
   padding: 1rem;
+  position: fixed;
+  right:10px;
+  bottom:10px;
+  width: 60vw;
+  color: var(--white);
+  border:1px solid #666;
+}
+
+#icons {
+  position:fixed;
+  bottom:10px;
+  right:calc(.5rem + 10px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width:fit-content;
+  height:3rem;
+}
+
+#emo,
+#mic {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right:.25rem;
 }
 
 main {
@@ -71,33 +97,39 @@ article {
   width: 97vw;
 }
 
-#msg {
-  margin: 0 1rem;
-  width: 60vw;
-  color:var(--white);
-}
 .msg {
   display: none;
   flex-direction: row;
   align-items: center;
   max-width: 85vw;
-  margin-bottom:1px;
+  margin-bottom: 1px;
 }
 
-.msg>img {
-  width: 3rem;
-  height: 3rem;
+.msg>svg {
+  min-width: 3rem;
+  min-height: 3rem;
 }
+
+#now {
+  display:none;
+  color:#bbb;
+  position:relative;
+  left:4.5rem;
+  font-size:.7rem;
+}
+
 #sms-marker {
   height: 2.5vh;
   position: fixed;
   bottom: 12.5vh;
-  display:flex;
+  display: flex;
   align-items: center;
 }
+
 #small-me {
   margin: 0 0rem 1rem 1rem;
 }
+
 #sms-connect {
   display: flex;
   flex-direction: row;
@@ -175,13 +207,15 @@ a:visited {
   right: 1rem;
   cursor: pointer;
 }
+
 .settings {
-  fill:white;
+  fill: white;
 }
+
 #settings-opt {
-  position:fixed;
-  top:0;
-  right:0;
-  width:fit-content;
-  height:fit-content;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: fit-content;
+  height: fit-content;
 }

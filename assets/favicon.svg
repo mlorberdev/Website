@@ -1,7 +1,144 @@
-<svg width="85.8mm" height="79.7mm" version="1.1" viewBox="0 0 85.8 79.7" xmlns="http://www.w3.org/2000/svg">
-	<g transform="translate(-85.3,-61.3)">
-		<path transform="matrix(.265 0 0 .265 85.3 61.3)" d="m257 246-90-75-40 110 21-116-116 21 110-40-75.5-90.4 90.5 75.4 40-110-21 116 116-21-110 40z" fill="#15a392"/>
-		<path transform="matrix(.162 .21 -.21 .162 134 42.9)" d="m257 246-90-75-40 110 21-116-116 21 110-40-75.5-90.4 90.5 75.4 40-110-21 116 116-21-110 40z" fill="#15a327" fill-opacity=".523"/>
-		<path transform="matrix(.158 -.213 .213 .158 70.4 111)" d="m257 246-90-75-40 110 21-116-116 21 110-40-75.5-90.4 90.5 75.4 40-110-21 116 116-21-110 40z" fill="#15a327" fill-opacity=".523"/>
-	</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="avatar"
+   enable-background="new 0 0 512 512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs178" />
+  <sodipodi:namedview
+     id="namedview176"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.713"
+     inkscape:cx="108"
+     inkscape:cy="206"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="avatar" />
+  <style
+     id="style2"
+     type="text/css">
+                .st9{fill:#342214;}
+                .st10{fill:#FFFFFF;}
+                </style>
+  <circle
+     fill="#aaa"
+     cx="259"
+     cy="275"
+     r="203"
+     opacity="0.718"
+     id="circle159"
+     style="fill:#000000;stroke:none;stroke-width:2.311;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;fill-opacity:1;opacity:1" />
+  <path
+     id="avatar_bg"
+     d="M 259,72.1 C 147,72.1 55.8,163 55.8,275 c 0.3,32 8.2,64 23.2,93 2,-7 4.1,-15 6.5,-17 9,-8 29.5,-16 88.5,-41 h -1 1 v 0 c -1,-12 11,-22 40,-30 v 13 c 1,0 1,-1 2,-1 l 82,-1 c 1,-1 0,2 0,1 l 1,-13 c 28,8 46,19 45,30 59,26 79,34 88,42 3,2 5,10 7,17 15,-29 23,-61 23,-93 C 462,163 371,72.1 259,72.1 Z"
+     style="fill:#073800;stroke:none;stroke-width:2.311;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;fill-opacity:1"
+     sodipodi:nodetypes="sscssccscssssccscss" />
+  <path
+     style="fill:#1a1a1a;fill-opacity:0.808;stroke:none;stroke-width:3.594;stroke-linecap:round;stroke-linejoin:round"
+     d="m 175,310 c -1,29 29,36 49,58 -30,-15 -55,-23 -69,-49 z"
+     id="path495"
+     sodipodi:nodetypes="cccc" />
+  <path
+     style="fill:#1a1a1a;fill-opacity:0.808;stroke:none;stroke-width:3.13202;stroke-linecap:round;stroke-linejoin:round"
+     d="m 344,310 c 1,22 -29,27 -49,44 30,-11 54,-16 68,-36 z"
+     id="path499"
+     sodipodi:nodetypes="cccc" />
+  <rect
+     style="fill:#b3b3b3;fill-opacity:0.808;stroke:none;stroke-width:2.39208;stroke-linecap:round;stroke-linejoin:round"
+     id="rect553"
+     width="9"
+     height="66.5"
+     x="-232"
+     y="368"
+     rx="4.5"
+     ry="4.76"
+     transform="scale(-1,1)" />
+  <rect
+     style="fill:#b3b3b3;fill-opacity:0.808;stroke:none;stroke-width:2.28829;stroke-linecap:round;stroke-linejoin:round"
+     id="rect555"
+     width="9"
+     height="60.9"
+     x="-298"
+     y="354"
+     rx="4.5"
+     ry="4.35"
+     transform="scale(-1,1)" />
+  <path
+     style="fill:#000080;fill-opacity:0.808;stroke:none;stroke-width:3.594;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+     d="m 230,237 2,9 52,5 6,-8 z"
+     id="path2812" />
+  <path
+     id="path18"
+     class="st2"
+     d="m256 269h1c22 1 2 24 31 11 30-12 31-55 17-57-12-2-25 6-45 5h-1l-4 41z" />
+  <path
+     id="path8"
+     class="st2"
+     d="m256 170v167c16 0 33-7 45-22v-103c0-28-22-42-45-42z" />
+  <path
+     id="path10"
+     class="st3"
+     d="m256 170c-22 0-45 14-45 42v103c12 14 29 22 45 22s33-8 45-22v-103c0-28-23-42-45-42z"
+     fill="#dcc5a1" />
+  <path
+     d="m 259,43.3 c -78,0.8 -95,61.7 -98,113.7 -4,-3 -7,-5 -11,-4 -8,2 -11,15 -9,29 4,8 14,29 23,21 2,16 5,26 7,29 5,10 23,29 41,44 57,27 10,3 42,19 7,4 63,-28 44,-13 20,-11 40,-26 46,-35 3,-3 8,-13 13,-28 10,9 25,-9 27,-15 7,-14 5,-27 -3,-31 -4,-1 -9,0 -13,4 6,-56 -1,-125.2 -93,-133.1 -6,-0.5 -11,-0.6 -16,-0.6 z"
+     fill="#dcc5a1"
+     id="path164" />
+  <path
+     d="m 257,43 c -57,0.5 -91,35.1 -96,114 l 5,33 6,-10 c -9,-84 23,-106.6 97,-70 79,-23.2 107,5 84,86 l 4,11 11,-32 C 377,88.4 343,48.6 275,43.9 269,43.2 262,42.9 257,43 Z"
+     fill="#8f7e68"
+     id="path166"
+     style="fill:#4d4535;fill-opacity:1" />
+  <path
+     id="path44"
+     class="st9 avatar_eye"
+     d="m225 163c5 0 10 5 9 11 0 6-6 11-11 10-6 0-9-5-9-11 1-6 5-11 11-10"
+     fill-opacity=".741"
+     opacity=".795" />
+  <path
+     id="path46"
+     class="st9 avatar_eye"
+     d="m306 170c5 0 10 5 9 11 0 6-6 11-11 11-6-1-9-6-9-12 1-6 5-11 11-10"
+     fill-opacity=".741"
+     opacity=".795" />
+  <path
+     id="path48"
+     class="st10"
+     d="m 226,237 c 3,13 15,23 32,25 12,0 29,-8 37,-18 z m 0,0 c -12,-1 16,25 32,25 12,0 50,-17 37,-18 z"
+     opacity="0.908"
+     stroke-width="1.692"
+     style="fill:#ffffff"
+     sodipodi:nodetypes="csccssss" />
+  <path
+     id="path5161"
+     d="m211 275v7c46 35 48 26 90 5v-7c-31 20-61 17-89-4"
+     fill-opacity=".741"
+     opacity=".323" />
+  <path
+     id="path40"
+     d="m316 221c-9-13-38 0-54-1h-1c-15-2-38-17-50-8-19 15-14 46 3 64 13 10 25 17 35 21 16 5 39-9 51-15 15-7 30-41 16-61zm-26 59c-29 13-9-10-31-11h-2c-19-2-8 22-33 5-27-18-19-58-5-58s23 9 42 12h1c20 1 32-7 45-5 14 2 13 45-17 57z"
+     fill="#7f6d54" />
+  <path
+     id="path40-8"
+     d="m316 221c-9-13-38 0-54-1h-1c-15-2-38-17-50-8-19 15-14 46 3 64 13 10 25 17 35 21 16 5 39-9 51-15 15-7 30-41 16-61zm-26 59c-29 13-9-10-31-11h-2c-19-2-8 22-33 5-27-18-19-58-5-58s23 9 42 12h1c20 1 32-7 45-5 14 2 13 45-17 57z"
+     fill="#d3c9bc"
+     fill-opacity=".191"
+     style="fill:#080705;fill-opacity:0.191" />
 </svg>
