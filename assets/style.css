@@ -38,7 +38,7 @@ footer {
   justify-content: right;
 }
 
-#msg {
+#chat {
   background: transparent;
   color: var(--white);
   border-radius: 2rem;
@@ -47,6 +47,7 @@ footer {
   right: 10px;
   bottom: 10px;
   width: 60vw;
+  max-width: 300px;
   color: var(--white);
   border: 1px solid #666;
 }
@@ -70,6 +71,17 @@ footer {
   margin-right: .25rem;
 }
 
+#emojis {
+  display: none;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding:1rem;
+  position:relative;
+  bottom:85%;
+}
+
 main {
   position: fixed;
   bottom: 10vh;
@@ -81,7 +93,6 @@ main {
   /* border:1px solid #00000066; */
   /* overflow-y: scroll; */
   overflow-x: hidden;
-  overflow-y: scroll;
   padding-top: 7rem;
 }
 
@@ -97,17 +108,43 @@ main {
 .column {
   flex-direction: column;
 }
+.row {
+  flex-direction: row;
+}
 
+.hide {
+  display: none;
+}
+header {
+  align-items: center;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height: fit-content;
+  justify-content: end;
+  margin-right:1rem;
+  font-size: .6rem;
+  color:#ccc;
+}
+header > svg {
+  width:.8rem;
+  height:.8rem;
+  fill:#ccc;
+  padding-right:5px;
+}
+header > div {
+  padding-right:5px;
+}
 #screen {
   position: relative;
   bottom: 0;
-  /* max-height:100vh; */
+  max-height:80vh;
   width: 95vw;
   height: fit-content;
   overflow-x: hidden;
-  /* overflow-y: scroll; */
-  padding-top: 5rem;
-  margin-bottom: 7vh;
+  overflow-y: scroll;
+  margin: 5rem 2.5vw 7vh 2.5vw;
 }
 
 ::-webkit-scrollbar {
@@ -117,15 +154,26 @@ main {
 }
 
 .msg {
-  display: none;
+  flex-direction: row;
+  align-items: center;
+  max-width: 85vw;
+  margin-bottom: 1px;
+}
+
+.repl,
+.user_input {
   flex-direction: row;
   align-items: center;
   max-width: 85vw;
   /* margin-bottom: 1px; */
 }
 
+.user_input {
+  color: white;
+}
+
 .msg>svg,
-.response>svg {
+.repl>svg {
   min-width: 3rem;
   min-height: 3rem;
 }
@@ -137,7 +185,6 @@ main {
 }
 
 #now {
-  display: none;
   color: #bbb;
   position: relative;
   left: 4.5rem;
@@ -153,8 +200,8 @@ main {
   overflow-y: hidden;
 }
 
-#small-me {
-  margin: 0 0rem 1rem 1rem;
+#small-me svg {
+  margin-left: 10px;
 }
 
 #sms-connect {
@@ -162,6 +209,7 @@ main {
   flex-direction: row;
   height: fit-content;
   padding-left: 1rem;
+
 }
 
 .texting {
@@ -203,10 +251,6 @@ main {
   }
 }
 
-.hide {
-  display: none;
-}
-
 .txt,
 .reply {
   background-color: #222;
@@ -219,8 +263,17 @@ main {
   width: fit-content;
   margin-left: .7rem;
 }
-.reply {
+
+.user_input {
   background-color: var(--blue);
+  padding: 1rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  width: fit-content;
+  position: absolute;
+  right: 0;
 }
 
 sup {
