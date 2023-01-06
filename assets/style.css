@@ -10,28 +10,67 @@
   --lite: #eee;
   --white: white;
   --black: black;
+  --ww: 100vw;
 }
-
+html,
 body {
   position: fixed;
   top: 0;
   left: 0;
   margin: 0;
-  width: 100vw;
   height: 100vh;
+}
+html {
+  background-image: url(./wood.jpg);
+  background-size: cover;
+  width:100vw;
+}
+body {
   background-color: var(--black);
+  width: var(--ww);
+}
+@media only screen and (min-width: 450px) {
+  :root {
+    --ww: 450px;
+  }
+  body {
+    left:calc((100vw - 450px)/2);
+    border-radius:10px;
+  }
 }
 
 * {
   font-family: mod;
   /* border:1px solid rgba(173, 23, 23, 0.589); */
 }
+header {
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: var(--ww);
+  height: fit-content;
+  justify-content: end;
+  margin-right: 1rem;
+  font-size: .6rem;
+  color: #ccc;
+}
 
+header>svg {
+  width: .8rem;
+  height: .8rem;
+  fill: #ccc;
+  padding-right: 5px;
+}
+
+header>div {
+  padding-right: 5px;
+}
 footer {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 100vw;
+  width: var(--ww);
   height: 10vh;
   display: flex;
   align-items: center;
@@ -43,10 +82,10 @@ footer {
   color: var(--white);
   border-radius: 2rem;
   padding: 1rem;
-  position: fixed;
+  position: relative;
   right: 10px;
   bottom: 10px;
-  width: 60vw;
+  width: 60%;
   max-width: 300px;
   color: var(--white);
   border: 1px solid #666;
@@ -85,7 +124,7 @@ footer {
 main {
   position: fixed;
   bottom: 10vh;
-  width: 100vw;
+  width: var(--ww);
   /* height:90vh; */
   height: fit-content;
   padding: .25rem .25rem .25 .25rem;
@@ -115,36 +154,15 @@ main {
 .hide {
   display: none;
 }
-header {
-  align-items: center;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100vw;
-  height: fit-content;
-  justify-content: end;
-  margin-right:1rem;
-  font-size: .6rem;
-  color:#ccc;
-}
-header > svg {
-  width:.8rem;
-  height:.8rem;
-  fill:#ccc;
-  padding-right:5px;
-}
-header > div {
-  padding-right:5px;
-}
 #screen {
   position: relative;
   bottom: 0;
   max-height:80vh;
-  width: 95vw;
+  width: 95%;
   height: fit-content;
   overflow-x: hidden;
   overflow-y: scroll;
-  margin: 5rem 2.5vw 7vh 2.5vw;
+  margin: 5rem 2.5% 7vh 2.5%;
 }
 
 ::-webkit-scrollbar {
@@ -156,7 +174,7 @@ header > div {
 .msg {
   flex-direction: row;
   align-items: center;
-  max-width: 85vw;
+  max-width: 85%;
   margin-bottom: 1px;
 }
 
@@ -164,7 +182,7 @@ header > div {
 .user_input {
   flex-direction: row;
   align-items: center;
-  max-width: 85vw;
+  max-width: 85%;
   /* margin-bottom: 1px; */
 }
 
@@ -181,7 +199,7 @@ header > div {
 .response {
   flex-direction: row;
   align-items: center;
-  max-width: 85vw;
+  max-width: 85%;
 }
 
 #now {

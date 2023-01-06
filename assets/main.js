@@ -1,6 +1,6 @@
 !(function () {
-
-  const minutes = () => { return new Date().getMinutes().length < 2 ? "0" + new Date().getMinutes() : new Date().getMinutes(); }
+console.log(new Date().getMinutes())
+  const minutes = () => { return new Date().getMinutes() < 10 ? "0" + new Date().getMinutes() : new Date().getMinutes(); }
   const mer = () => { return new Date().toLocaleTimeString().split(" ")[1]; };
   const txt = document.querySelectorAll(".txt");
   const sms = document.getElementById("sms-marker");
@@ -74,7 +74,7 @@
       screen.appendChild(now);
       screen.scrollTop = screen.scrollHeight;
       sms.style.display = "none";
-      setTimeout(() => { document.getElementById("now").innerHTML = `${new Date().getHours()}:${minutes()} ${mer()}`}, 10000);
+      setTimeout(() => { document.getElementById("now").innerHTML = `${new Date().getHours()%12}:${minutes()} ${mer()}`}, 10000);
     }
   }
 
@@ -147,7 +147,7 @@
 
   // TIME
   function setTime() {
-    document.getElementById("time").innerHTML = `${new Date().getHours()}:${minutes()}`;
+    document.getElementById("time").innerHTML = `${new Date().getHours()%12}:${minutes()}`;
   }
   setTime();
   setInterval(setTime, 60000);
