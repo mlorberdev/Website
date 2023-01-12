@@ -1,0 +1,75 @@
+@font-face {
+  font-family: ukr;
+  src: url(./kyiv.ttf);
+}
+@font-face {
+  font-family: mod;
+  src: url(./ModernSans-Light.otf);
+}
+
+* {
+  font-family: mod;
+  scroll-behavior: smooth;
+  /* border:1px solid rgba(173, 23, 23, 0.589); */
+}
+/* HIDE SCROLLBARS */
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body {
+  background-color: #000;
+  margin:none;
+}
+
+.ukrainian {
+  font-family: ukr;
+}
+
+/* STATS PAGE */
+.title {
+  font-size: 1.4rem;
+}
+
+#stats_main {
+  color: #0de7e7;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#stats_wrap {
+  width: 80vw;
+  max-width:400px;
+  height: 75vh;
+  margin-top: 10vh;
+  overflow-y: scroll;
+}
+
+#stats_wrap>div {
+  padding: calc(min(5vw, 5vh));
+}
+#down_stats {
+  width:100vw;
+  position: absolute;
+  bottom: 5vh;
+}
+.down_wrap {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #111;
+  padding: .4rem;
+}
+.flex {
+  display:flex;
+}
+.center {
+  align-items: center;
+  justify-content: center;
+}
+.washout {
+  font-size:.8rem;
+  filter: invert(75%) sepia(93%) saturate(1977%) hue-rotate(125deg) brightness(102%) contrast(90%) opacity(.6);
+}
