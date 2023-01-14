@@ -1,6 +1,26 @@
+/* #loader {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  margin:0;
+  background-color: #000;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  z-index:100;
+} */
+
 @font-face {
   font-family: mod;
   src: url(./ModernSans-Light.otf);
+}
+
+* {
+  font-family: mod;
+  scroll-behavior: smooth;
+  /* border:1px solid rgba(173, 23, 23, 0.589); */
 }
 
 :root {
@@ -12,7 +32,7 @@
   --black: black;
   --ww: 100vw;
 }
-html,
+
 body {
   position: fixed;
   top: 0;
@@ -20,29 +40,29 @@ body {
   margin: 0;
   height: 100vh;
 }
+
 html {
-  background-image: url(./wood.jpg);
+  background-image: url(./wood.webp);
   background-size: cover;
-  width:100vw;
+  width: 100vw;
 }
+
 body {
   background-color: var(--black);
   width: var(--ww);
 }
+
 @media only screen and (min-width: 450px) {
   :root {
-    --ww: 450px;
+    --ww: 350px;
   }
+
   body {
-    left:calc((100vw - 450px)/2);
-    border-radius:10px;
+    left: calc((100vw - 440px)/2);
   }
 }
 
-* {
-  font-family: mod;
-  /* border:1px solid rgba(173, 23, 23, 0.589); */
-}
+/* TIME, BATTERY, SIGNAL */
 header {
   align-items: center;
   position: relative;
@@ -66,43 +86,49 @@ header>svg {
 header>div {
   padding-right: 5px;
 }
+
+/* MAIN SECONDARY ELEMENT: TEXT INPUT, ETC. */
 footer {
   position: absolute;
   bottom: 0;
-  right: 0;
-  width: var(--ww);
+  left: 12px;
+  width: calc(var(--ww) - 23px);
   height: 10vh;
-  display: flex;
   align-items: center;
   justify-content: right;
+  margin-right: 10px;
+  background-color: #000;
+  z-index: 1;
 }
 
+/* TEXT INPUT FIELD */
 #chat {
   background: transparent;
   color: var(--white);
   border-radius: 2rem;
   padding: 1rem;
   position: relative;
-  right: 10px;
-  bottom: 10px;
+  right: 0;
+  bottom: 0;
   width: 60%;
   max-width: 300px;
   color: var(--white);
   border: 1px solid #666;
 }
 
+/* TEXT INPUT ELEMENTS WRAPPER */
 #icons {
-  position: fixed;
-  bottom: 10px;
-  right: calc(.5rem + 10px);
+  position: absolute;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: fit-content;
-  height: 3rem;
+  height: fit-content;
+  padding-right: 5px;
 }
 
+/* TEXT INPUT ELEMENTS */
 #emo,
 #mic {
   width: 1.25rem;
@@ -110,31 +136,29 @@ footer {
   margin-right: .25rem;
 }
 
+/* CAMERA */
+#camera {
+  width: 18px;
+  height: 18px;
+  fill: #666;
+  margin-right: 1.5rem;
+}
+
+/* EMOJI BAR */
 #emojis {
   display: none;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  padding:1rem;
-  position:relative;
-  bottom:85%;
+  padding: 1rem;
+  position: absolute;
+  bottom: 85%;
+  right: 0;
+  cursor: default;
 }
 
-main {
-  position: fixed;
-  bottom: 10vh;
-  width: var(--ww);
-  /* height:90vh; */
-  height: fit-content;
-  padding: .25rem .25rem .25 .25rem;
-  z-index: -1;
-  /* border:1px solid #00000066; */
-  /* overflow-y: scroll; */
-  overflow-x: hidden;
-  padding-top: 7rem;
-}
-
+/* GENERAL STYLING CLASSES */
 .flex {
   display: flex;
 }
@@ -147,6 +171,7 @@ main {
 .column {
   flex-direction: column;
 }
+
 .row {
   flex-direction: row;
 }
@@ -154,59 +179,83 @@ main {
 .hide {
   display: none;
 }
+
+/* SCROLLING ELEMENT */
 #screen {
   position: relative;
-  bottom: 0;
-  max-height:80vh;
+  /* top: .5rem; */
+  top: 100%;
   width: 95%;
   height: fit-content;
+  max-height: 80vh;
   overflow-x: hidden;
   overflow-y: scroll;
-  margin: 5rem 2.5% 7vh 2.5%;
+  margin: 0 2.5%;
+  transition: all .5s linear;
 }
 
+/* HIDE SCROLLBARS */
 ::-webkit-scrollbar {
   display: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-.msg {
-  flex-direction: row;
+/* INPUT TYPE TEXT */
+.user_input_wrap {
+  width: 100%;
+  position: relative;
+  justify-content: right;
+}
+
+.msg,
+.user_input {
   align-items: center;
   max-width: 85%;
   margin-bottom: 1px;
-}
-
-.repl,
-.user_input {
-  flex-direction: row;
-  align-items: center;
-  max-width: 85%;
-  /* margin-bottom: 1px; */
+  color: #fff;
 }
 
 .user_input {
-  color: white;
+  background-color: var(--blue);
+  padding: 1rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 
-.msg>svg,
-.repl>svg {
+/* MESSAGE TIMESTAMP */
+.now {
+  color: #bbb;
+  position: relative;
+  left: 4.5rem;
+  font-size: .6rem;
+  width:fit-content;
+}
+.now.left {
+  width:fit-content;
+  padding-left:calc(100% - 3rem);
+  left:unset;
+  /* right:0; */
+}
+
+/* AVATARS */
+#small-me svg {
+  margin-left: 10px;
+}
+
+.msg>svg {
   min-width: 3rem;
   min-height: 3rem;
 }
 
-.response {
+/* TECHNICALLY MMS, BUT THIS IS WRAP FOR TYPING DOTS */
+#sms-connect {
+  display: flex;
   flex-direction: row;
-  align-items: center;
-  max-width: 85%;
-}
-
-#now {
-  color: #bbb;
-  position: relative;
-  left: 4.5rem;
-  font-size: .7rem;
+  height: fit-content;
+  padding-left: 1rem;
 }
 
 #sms-marker {
@@ -216,20 +265,10 @@ main {
   display: flex;
   align-items: center;
   overflow-y: hidden;
+  z-index: 2;
 }
 
-#small-me svg {
-  margin-left: 10px;
-}
-
-#sms-connect {
-  display: flex;
-  flex-direction: row;
-  height: fit-content;
-  padding-left: 1rem;
-
-}
-
+/* TYPING MMS INDICATOR */
 .texting {
   width: .5vh;
   height: .5vh;
@@ -269,8 +308,8 @@ main {
   }
 }
 
-.txt,
-.reply {
+/* PRIMARY TEXT MESSAGE WRAPPERS */
+.txt {
   background-color: #222;
   color: var(--white);
   padding: 1rem;
@@ -282,27 +321,23 @@ main {
   margin-left: .7rem;
 }
 
-.user_input {
-  background-color: var(--blue);
-  padding: 1rem;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  width: fit-content;
-  position: absolute;
-  right: 0;
-}
-
+/* SUPERSCRIPT */
 sup {
   font-size: .4rem;
 }
 
+/* LINKS */
 a,
 a:visited {
   color: rgb(12, 217, 224);
 }
 
+/* DON'T SHOW BUT KEEP FOR POSITIONING */
+.inviz {
+  visibility: hidden;
+}
+
+/* SETTINGS */
 #settings {
   position: fixed;
   top: 1rem;
@@ -320,4 +355,44 @@ a:visited {
   right: 0;
   width: fit-content;
   height: fit-content;
+}
+
+#down {
+  position: absolute;
+  bottom: 7.5%;
+  width: 100%;
+  height: fit-content;
+  z-index: 0;
+}
+
+.down_wrap {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #111;
+  padding: .4rem;
+}
+
+/* INSET BOX SHADOW FOR FULLSCREEN */
+body::before,
+body::after {
+  content: " ";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 15px;
+  background-color: #000;
+
+}
+
+body::before {
+  box-shadow: -10px 0 10px -10px inset #666;
+  right: -10px;
+  border-top-left-radius: 15px;
+}
+
+body::after {
+  box-shadow: 15px 0 15px -15px inset #666;
+  left: -10px;
+  border-top-right-radius: 15px;
 }

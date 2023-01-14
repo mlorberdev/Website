@@ -1,8 +1,4 @@
 @font-face {
-  font-family: ukr;
-  src: url(./kyiv.ttf);
-}
-@font-face {
   font-family: mod;
   src: url(./ModernSans-Light.otf);
 }
@@ -23,20 +19,22 @@ body {
   margin:none;
 }
 
-.ukrainian {
-  font-family: ukr;
-}
-
 /* STATS PAGE */
 .title {
   font-size: 1.4rem;
+  padding-bottom:.5rem;
+  font-weight: 600;
 }
-
+a, a:visited {
+  color:#0de7e7;
+}
 #stats_main {
   color: #0de7e7;
   display:flex;
   align-items: center;
   justify-content: center;
+  transform-origin: center center;
+  transform: rotate(-3deg);
 }
 
 #stats_wrap {
@@ -48,19 +46,32 @@ body {
 }
 
 #stats_wrap>div {
-  padding: calc(min(5vw, 5vh));
+  padding: calc(min(3vw, 3vh));
 }
 #down_stats {
   width:100vw;
   position: absolute;
-  bottom: 5vh;
+  bottom: -8vh;
+}
+.popup {
+  z-index:1;
+  transform-origin: center center;
+  animation: popup 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes popup {
+  0% {
+    transform:translateY(10vh);
+  }
+  100% {
+    transform:translateY(0);
+  }
 }
 .down_wrap {
-  width: 2rem;
-  height: 2rem;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background-color: #111;
   padding: .4rem;
+  border: 3px solid #0de7e7;
 }
 .flex {
   display:flex;
@@ -69,7 +80,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-.washout {
-  font-size:.8rem;
-  filter: invert(75%) sepia(93%) saturate(1977%) hue-rotate(125deg) brightness(102%) contrast(90%) opacity(.6);
+.row {
+  flex-direction: row;
 }

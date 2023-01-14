@@ -1,123 +1,136 @@
 !(function () {
-console.log(new Date().getMinutes())
-  const minutes = () => { return new Date().getMinutes() < 10 ? "0" + new Date().getMinutes() : new Date().getMinutes(); }
-  const mer = () => { return new Date().toLocaleTimeString().split(" ")[1]; };
+
+  // setTimeout(() => {
+  //   document.getElementById("loader").style.display = "none";
+  // },1000);
+
+  // CLOCK TIME
+  const time = () => {
+    let d = new Date().toLocaleTimeString().split(":");
+    return `${d[0]}:${d[1]} ${d[2].split(" ")[1]}`;
+  }
+  // VARIABLES
+  let N = 0; // tracks number of sent messages (for Now show/hide)
+  const screen = document.getElementById("screen");
   const txt = document.querySelectorAll(".txt");
   const sms = document.getElementById("sms-marker");
-  const sms_delay = 1200;
-  let delay = 0;
-  let N = 0;
   const texts = [
     `Hi! 👋 It's Matt`,
     `How are you 🤔❔`,
     `Want to play a game? 👾`,
-    ` <span><a href="https://wrdl-with-restful-api.netlify.app/" target="_blank">Wordle<sup>TM</sup> Clone</a>` +
-    `🔗</span><span><a href="https://minesweeper-clone-jquery.netlify.app/" target="_blank">Minesweeper</a> 🔗</span>` +
-    `<span><a href="https://snake-vanilla-js-canvas.netlify.app/" target="_blank">Snake</a> 🔗❔</span>`,
-    `Make a <span><a href="https://qr-code-styler.netlify.app/" target="_blank">QR code</a> 🔗 for your WiFi/Event/etc...?`,
-    `Or grab a free <span><a href="https://mlorberdev-generative-art.netlify.app/" target="_blank">digital art masterpiece?</a> 🔗 Maybe for a background ...`,
-    `You can check out these and my other work on <a href="https://github.com/mlorberdev" target="_blank">Github</a> 😎`,
-    `and <a href="https://codepen.io/mlorberdev" target="_blank">Codepen</a> 🕶️`,
-    `Or find me on <a href="https://www.linkedin.com/in/matthew-lorber" target="_blank">LinkedIn</a>`,
-    `You can also <a href="mailto:mlorber.dev@gmail.com">email</a> me 🫱‍🫲🏾`,
-    `I'm glad you stopped by👍!! Take care!💯`
+    ` <span><a href="https://wrdl-with-restful-api.netlify.app/">Wordle<sup>TM</sup> Clone</a>` +
+    `🔗</span><span><a href="https://minesweeper-clone-jquery.netlify.app/">Minesweeper</a> 🔗</span>` +
+    `<span><a href="https://snake-vanilla-js-canvas.netlify.app/">Snake</a> 🔗❔</span>`,
+    `Make a <span><a href="https://qr-code-styler.netlify.app/">QR code</a> 🔗 for your WiFi/Event/etc...?`,
+    `Or grab a free <span><a href="https://mlorberdev-generative-art.netlify.app/">digital art masterpiece?</a> 🔗 Maybe for a background ...`,
+    `actually, try <a href="https://particles-background.netlify.app/">this experiment</a> for bgs...🕶️`,
+    `You can check out these and my other work on <a href="https://github.com/mlorberdev">Github</a> 😎` +
+    ` and <a href="https://codepen.io/mlorberdev">Codepen</a> 🕶️`,
+    `...find me on <a href="https://www.linkedin.com/in/matthew-lorber">LinkedIn</a>`,
+    `Have a quick look at my <a href="./stats.html">stats</a> page while you're here?`,
+    `<a href="mailto:mlorber.dev@gmail.com">Email</a> 🫱‍🫲🏾 me if you'd like to chat!`,
+    `Glad you stopped by👍!! Let's get together soon! 💯`
   ];
-  let text;
-  
+  const replies = [
+    `*What's a xxxxx? Is that like a 🧌❔`,
+    `*xxxxx 🎉`,
+    `*xxxxx seriously❔`,
+    `*xxxxx's ⭐⭐⭐`,
+    `*xxxxx! I'm not really an AI 😁 I have no idea what you're saying 🤪`,
+    `*<a href="https://loveyouineke.netlify.app/">Game of Life</a>`
+  ];
+
   // TIMING FUNCTION
-  const int = setInterval(() => { newText(N); }, 2000);
-
-  function newText(i) {
-    // IF I == SOME NUMVER OF TEXTS, ADD A DIV WITH CLASS .space
-    N++;
-    message(i);
-    // switch (i) {
-    //   case 0: message(i); break;
-    //   case 1: message(i); ha(i); br(i); break;
-    //   case 2: message(i); ha(i); br(i, i); break;
-    //   case 3: if (delay < 4) { delay++; return; } else { message(i); space(0); break; }
-    //   case 4: message(i); ha(i); br(i); break;
-    //   case 5: message(i); ha(i); br(i); break;
-    //   case 6: message(i); ha(i); br(i); break;
-    //   case 7: if (delay < 7) { delay++; return; } else { message(i); space(1); break; }
-    //   case 8: message(i); ha(i); br(i); break;
-    //   case 9: message(i); ha(i); br(i); break;
-    //   case 10: message(i); ha(i); br(i); break;
-    //   case 11: if (delay < 15) { delay++; return; } else { message(i); space(2); break; }
-    //   default: break;
-    // }
-  }
-
-  // newText(0);
-
-  // MY TEMPLATED MESSAGES sends message from me
-  function message(i) {
-    let screen = document.getElementById("screen");
-    let template = `<svg width="3rem" height="3rem" viewBox="0 0 512 512"><use xlink:href="#avatar" /></svg>` +
-      `<span class="txt">${texts[i]}</span></div>`;
-    let mmm = document.createElement("div");
-    mmm.classList.add("msg", "flex", "row");
-    mmm.innerHTML = template;
-    sms.style.display = "flex";
-    if (i < 11) {
-      setTimeout(() => {
-        screen.appendChild(mmm);
-        screen.scrollTop = screen.scrollHeight;
-        sms.style.display = "none";
-      }, sms_delay);
-    }
-    else {
-      clearInterval(int);
-      let now = document.createElement("div");
-      now.id = "now";
-      now.innerHTML = `Now`;
-      screen.appendChild(now);
-      screen.scrollTop = screen.scrollHeight;
+  const int = setInterval(() => {
+    message();
+    if (texts.length === 0) {
       sms.style.display = "none";
-      setTimeout(() => { document.getElementById("now").innerHTML = `${new Date().getHours()%12}:${minutes()} ${mer()}`}, 10000);
+      clearInterval(int);
+      setTimeout(() => document.querySelectorAll(".now:last-of-type").innerHTML = time(), 5000);
     }
+  }, 3000);
+
+  // TEXTS SENT BY MY AVATAR
+  function message() {
+    let msg = document.createElement("div");
+    let txt = texts[0]; // note: replies get spliced into texts array
+    msg.innerHTML = `<svg width="3rem" height="3rem" viewBox="0 0 512 512"><use xlink:href="#avatar" /></svg><span class="txt">${txt}</span>`;
+    msg.classList.add("msg", "flex", "row");
+    msg.id = `msg${N}`;
+    msg.addEventListener("click", toggleNow);
+    if (txt.charAt(0) === "*") msg.innerHTML = msg.innerHTML.replace("*", "");
+    let now = document.createElement("div");
+    now.classList.add("now");
+    now.id = `now${N}`;
+    N++;
+    now.innerHTML = `Now`;
+    sms.style.display = "flex";
+    texts.splice(0, 1);
+    screen.appendChild(msg);
+    screen.appendChild(now);
+    removeNowQuestionMark();
+    // screen.scrollTop = screen.scrollHeight;
+    // setTimeout(() => {
+    //   sms.style.display = "none";
+    //   setTimeout(() => {
+    //     screen.append(msg);
+    //     screen.append(now);
+    //     screen.scrollTop = screen.scrollHeight;
+    //     if (texts.length > 0) {
+    //       document.querySelectorAll(".now:last-of-type")[0].style.display = "none";
+    //     }
+    //     screen.scrollTop = screen.scrollHeight;
+    //     setTimeout(() => now.style.visibility = "visible", 1000);
+    //   }, 500);
+    //   setTimeout(() => { now.innerHTML = time() }, 10000);
+    // }, 2200);
   }
 
-  // INPUT EVENT send message back from "me"
-  let R = -1; // counter for what reply to send to user
+  // SPLICE A RESPONSE INTO AVATAR TEXTS ARRAY IN RESPONSE to USER MESSAGE input event
+  function reply(x) {
+    setTimeout(() => {
+      replies[0] = replies[0].toString().replace("xxxxx", x)
+      texts.splice(0, 0, replies[0]);
+      replies.splice(0, 1);
+    }, 2000);
+  }
+
+  // USER MESSAGE input event
+  let numUserMessages = 0;
+  // let sendPrompt;
   document.getElementById("chat").addEventListener("change", function () {
+    numUserMessages++; // if user doesn't respond after a number of messages, send a prompt
+    console.log(numUserMessages);
+
+
+    // prompt logic here (ie if numusermessages is still zero, then...)
+
+    // splice new message in
+    // possibly type it into field
+    // this could get crazy...
 
     let mm = this.value;
-    let thisMsg = document.createElement("div");
-    thisMsg.classList.add("user_input");
-    thisMsg.innerHTML = `<span>${mm}</span>`;
-    let msgs = document.querySelectorAll(".msg.sent").length;
+    let mms = mm.split(" ")[Math.floor(Math.random() * (mm.split(" ").length))]; // random word from user msg recieved
+    let um = document.createElement("div"); // user message
+    um.classList.add("user_input_wrap", "flex", "row", "right");
+    um.innerHTML = `<div class="user_input">${mm}</div>`;
+    this.value = "";
 
-    setTimeout(() => {
-      let mms = mm.split(" ")[Math.floor(Math.random() * (mm.split(" ").length))]; // random word from user msg recieved
-
-      const replies = [
-        `What's a ${mms}? Is that like a 🧌?`,
-        `A ${mms} 🎉`,
-        `🤪 ${mms} seriously?`,
-        `${mms}'s ⭐⭐⭐`,
-        `Sorry! I'm not really an AI 😁 I have no idea what you're saying 🤪`
-      ];
-
-      R < replies.length ? R++ : R = 0; // cycle back to initial reply
-      let reply = document.createElement("div"); // new reply  
-      reply.classList.add("repl");
-      reply.innerHTML = `<svg width="3rem" height="3rem" viewBox="0 0 512 512"><use xlink:href="#avatar" />` +
-        `</svg><span class="reply">${replies[R]}</span>`;
-      // QUERY SENT LENGTH HERE
-      // MAKE SURE EACH SENT FROM EITHER STREAM HAS A .sent CLASS
-      // ATTACH MESSAGE TO DIV LENGTH FROM QUERY
-
-      msg[snt.length].after(reply);
-    }, 1000);
-
-    this.value = ""; // clear input text
-
+    let now = document.createElement("div");
+    now.classList.add("now", "left");
+    now.id = `now${N}`;
+    N++;
+    now.innerHTML = `Now`;
+    screen.appendChild(um);
+    screen.appendChild(now);
+    removeNowQuestionMark();
+    // screen.scrollIntoView(um);
+    reply(mms);
+    // screen.scrollTop = screen.scrollHeight;
   });
 
   // BORDER RADIUS MODS
   function br(i, j) {
-
     console.log(i, j);
     txt[i - 2].style.borderBottomLeftRadius = 0;
     txt[i - 1].style.borderTopLeftRadius = 0;
@@ -126,7 +139,7 @@ console.log(new Date().getMinutes())
 
   // HIDING AVATAR but KEEP FOR SPACING
   function ha(i) {
-    document.querySelectorAll(`.msg svg`)[i-1].style.visibility = "hidden";
+    document.querySelector(`.msg:nth-of-type(${i}) svg`).style.visibility = "hidden";
   }
 
   // ADD SPACE AFTER LONGER PAUSES IN ANIM SEQUENCE
@@ -147,9 +160,42 @@ console.log(new Date().getMinutes())
 
   // TIME
   function setTime() {
-    document.getElementById("time").innerHTML = `${new Date().getHours()%12}:${minutes()}`;
+    document.getElementById("time").innerHTML = time();
   }
   setTime();
   setInterval(setTime, 60000);
+
+  // SCROLL STATE
+  const down = document.getElementById("screen");
+  void function upDown() {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log("int");
+        }
+      });
+    }, { threshold: 1 });
+    observer.observe(down);
+  }();
+
+
+  // // ANIMATION RUN/PAUSE USING INTERSECTION OBSERVER
+  // void function pauseAnim() {
+  //   const observer = new IntersectionObserver(entries => {
+  //     entries.forEach(entry => entry.target.style.animationPlayState = entry.isIntersecting ? "running" : "paused");
+  //   }, { threshold: 1 });
+  //   observer.observe(down)
+  // cows.forEach(cow => observer.observe(cow));
+  // }();
+
+  // HIDE && SHOW TIMESTAMPS
+  function removeNowQuestionMark() {
+    let allNows = document.querySelectorAll(".now");
+    let l = allNows.length - 1;
+    if (l > 0) allNows[l - 1].style.display = "none";
+  }
+  function toggleNow() {
+    document.getElementById(`now${this.id.toString().split("g")[1]}`).classList.toggle("hide");
+  }
 
 })();
