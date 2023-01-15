@@ -1,17 +1,3 @@
-/* #loader {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
-  margin:0;
-  background-color: #000;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  z-index:100;
-} */
-
 @font-face {
   font-family: mod;
   src: url(./ModernSans-Light.otf);
@@ -39,6 +25,7 @@ body {
   left: 0;
   margin: 0;
   height: 100vh;
+  
 }
 
 html {
@@ -74,6 +61,7 @@ header {
   margin-right: 1rem;
   font-size: .6rem;
   color: #ccc;
+  padding:3px;
 }
 
 header>svg {
@@ -138,8 +126,8 @@ footer {
 
 /* CAMERA */
 #camera {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   fill: #666;
   margin-right: 1.5rem;
 }
@@ -182,12 +170,11 @@ footer {
 
 /* SCROLLING ELEMENT */
 #screen {
-  position: relative;
-  /* top: .5rem; */
-  top: 100%;
+  position:absolute;
+  bottom:15vh;
   width: 95%;
   height: fit-content;
-  max-height: 80vh;
+  max-height: 82vh;
   overflow-x: hidden;
   overflow-y: scroll;
   margin: 0 2.5%;
@@ -219,10 +206,10 @@ footer {
 .user_input {
   background-color: var(--blue);
   padding: 1rem;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
 }
 
 /* MESSAGE TIMESTAMP */
@@ -260,7 +247,7 @@ footer {
 
 #sms-marker {
   height: fit-content;
-  position: fixed;
+  position: absolute;
   bottom: 7.5vh;
   display: flex;
   align-items: center;
@@ -313,10 +300,10 @@ footer {
   background-color: #222;
   color: var(--white);
   padding: 1rem;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-top-left-radius:24px;
+  border-top-right-radius:24px;
+  border-bottom-left-radius:24px;
+  border-bottom-right-radius:24px;
   width: fit-content;
   margin-left: .7rem;
 }
@@ -359,10 +346,11 @@ a:visited {
 
 #down {
   position: absolute;
-  bottom: 7.5%;
+  bottom: 0;
   width: 100%;
   height: fit-content;
   z-index: 0;
+  transition:bottom .2s linear;
 }
 
 .down_wrap {
@@ -388,11 +376,13 @@ body::after {
 body::before {
   box-shadow: -10px 0 10px -10px inset #666;
   right: -10px;
-  border-top-left-radius: 15px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 5px;
 }
 
 body::after {
   box-shadow: 15px 0 15px -15px inset #666;
   left: -10px;
-  border-top-right-radius: 15px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 5px;
 }

@@ -14,9 +14,16 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+html {
+  background-image: url(./wood.webp);
+  background-size: cover;
+  width: 100vw;
+}
+
 body {
-  background-color: #000;
   margin:none;
+  overflow:hidden;
 }
 
 /* STATS PAGE */
@@ -29,8 +36,11 @@ a, a:visited {
   color:#0de7e7;
 }
 #stats_main {
-  color: #0de7e7;
+  background-color: #000;
+  width:80vw;
+  max-width:400px;
   display:flex;
+  padding-bottom:50px;
   align-items: center;
   justify-content: center;
   transform-origin: center center;
@@ -38,6 +48,7 @@ a, a:visited {
 }
 
 #stats_wrap {
+  color: #0de7e7;
   width: 80vw;
   max-width:400px;
   height: 75vh;
