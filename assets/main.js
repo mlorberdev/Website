@@ -25,11 +25,11 @@
     `Glad you stopped by 💯! Let's get together on something soon!`
   ];
   const replies = [
-    `*What's xxxxx again ✨❔✨`,
+    `*xxxxx! 😁 I have no idea what you're saying 🤪`,
+    `*✨xxxxx✨`,
     `*🎉🎉xxxxx🎉🎉`,
-    `*xxxxx seriously 🧊! `,
+    `*xxxxx seriously 🧊 `,
     `*xxxxx ⭐⭐⭐`,
-    `*xxxxx! I'm not really here 😁 I have no idea what you're saying 🤪`
   ];
 
   // TIMING
