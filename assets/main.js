@@ -8,7 +8,6 @@
   // VARIABLES
   let N = 0; // tracks number of sent messages (for Now show/hide)
   const screen = document.getElementById("screen");
-  const txt = document.querySelectorAll(".txt");
   const sms = document.getElementById("sms-marker");
   const texts = [
     `Hi👋 It's Matt<br>How are you 🤔`,
@@ -26,17 +25,15 @@
     `Glad you stopped by 💯! Let's get together on something soon!`
   ];
   const replies = [
-    `*What's a xxxxx? Is that like a 🧌❔`,
-    `*xxxxx 🎉`,
-    `*xxxxx seriously❔`,
-    `*xxxxx's ⭐⭐⭐`,
-    `*xxxxx! I'm not really an AI 😁 I have no idea what you're saying 🤪`
-    // `*<a href="https://loveyouineke.netlify.app/" target="_blank">Game of Life</a>`
+    `*What's xxxxx again ✨❔✨`,
+    `*🎉🎉xxxxx🎉🎉`,
+    `*xxxxx seriously 🧊! `,
+    `*xxxxx ⭐⭐⭐`,
+    `*xxxxx! I'm not really here 😁 I have no idea what you're saying 🤪`
   ];
 
   // TIMING
-
-  const int = setInterval(message, 8000);
+  const int = setInterval(message, 6000);
 
   // TEXTS SENT BY MY AVATAR
   function message() {
@@ -58,9 +55,9 @@
     }, 3000);
     setTimeout(() => {
       removeNowQuestionMark(); // remove prior timestamp
+      N++;
       screen.appendChild(msg);
       screen.appendChild(now);
-      N++;
       br(); // border radius
       screen.scrollTop = screen.scrollHeight;
     }, 3300);
@@ -72,9 +69,8 @@
 
   // SPLICE A RESPONSE INTO AVATAR TEXTS ARRAY IN RESPONSE to USER MESSAGE input event
   function reply(x) {
-    if (replies.length === 0) return;
     setTimeout(() => {
-      replies[0] = replies[0].toString().replace("xxxxx", x);
+      replies.length === 0 ? replies[0] = `*Send me that xxxxx via email`.replace("xxxxx", x) : replies[0] = replies[0].toString().replace("xxxxx", x);
       if (texts.length === 0) setTimeout(message, 2500);
       texts.splice(0, 0, replies[0]);
       replies.splice(0, 1);
@@ -94,10 +90,10 @@
     now.id = `msg${N}`;
     N++;
     now.innerHTML = `Now`;
+    removeNowQuestionMark();
     screen.appendChild(um);
     screen.appendChild(now);
     br();
-    removeNowQuestionMark();
     reply(mms);
     screen.scrollTop = screen.scrollHeight;
   });
@@ -106,10 +102,14 @@
   function br() {
     if (N === 1) return;
     let msgs = document.querySelectorAll(".xmsg");
-    
-    // txt[i - 2].style.borderBottomLeftRadius = 0;
-    // txt[i - 1].style.borderTopLeftRadius = 0;
-    // if (j) txt[i - 1].style.borderTopLeftRadius = 0;
+    if (msgs[N - 2].classList.contains("msg") && msgs[N - 1].classList.contains("msg")) {
+      document.querySelector(`#${msgs[N - 2].id} .txt`).style.borderBottomLeftRadius = 0;
+      document.querySelector(`#${msgs[N - 1].id} .txt`).style.borderTopLeftRadius = 0;
+      document.querySelector(`#${msgs[N - 1].id} > svg`).classList.add("inviz");
+    } else if (msgs[N - 2].classList.contains("user_input_wrap") && msgs[N - 1].classList.contains("user_input_wrap")) {
+      document.querySelectorAll(`.user_input`)[N - 2].style.borderBottomRightRadius = 0;
+      document.querySelectorAll(`.user_input`)[N - 1].style.borderTopRightRadius = 0;
+    }
   }
 
   // ADD SPACE AFTER LONGER PAUSES IN ANIM SEQUENCE
@@ -139,7 +139,7 @@
   function removeNowQuestionMark() {
     let allNows = document.querySelectorAll(".now");
     let l = allNows.length;
-    if (l > 0) allNows[l-1].style.display = "none";
+    if (l > 0) allNows[l - 1].style.display = "none";
   }
 
 })();
