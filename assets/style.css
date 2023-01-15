@@ -238,14 +238,14 @@ footer {
 }
 
 /* TECHNICALLY MMS, BUT THIS IS WRAP FOR TYPING DOTS */
-#sms-connect {
+#mms-connect {
   display: flex;
   flex-direction: row;
   height: fit-content;
   padding-left: 1rem;
 }
 
-#sms-marker {
+#mms-marker {
   height: fit-content;
   position: absolute;
   bottom: 7.5vh;
