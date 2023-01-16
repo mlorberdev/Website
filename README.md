@@ -4,26 +4,32 @@ Deployed [here](https://mlorber.com)
 
 ## Description
 
-Personal website in vanilla JS made to resemble a chat session. I share my online details and invite the visitor to interact with a very non-AI avatar.
+Personal website in vanilla JS made to resemble a chat session. The avatar shares my details and provides links and minimal interaction in response to user inputs.
 
-## Code Summary
-* Coded in vanilla JS, uses fileReader, encodeURIComponent, and RegEx matching (sample below)
+## Code Excerpt
+* Coded in vanilla JS ES6
 ```javascript
-let target = source
-  .replace(/(?=(\<\!\-\-))(.*)(\-\-\>)/g,"") 
-  .replace(/\n|\t/gm,"")
-  .replace(/ +/gm," ") 
-  .replace(/ \</gm,"<")
-  .replace(/\s?=\>/gm,">") 
-  .replace(/ \>/gm,">")
-  .replace(/\: /gm,":")
-  .replace(/\; /gm,";")
-  .replace(/\, /gm,",");
+// SPLICE A RESPONSE INTO AVATAR TEXTS ARRAY IN RESPONSE to USER MESSAGE input event
+function reply(x) {
+  setTimeout(() => {
+    replies.length === 0 ? replies[0] = `*Send me that xxxxx via email`.replace("xxxxx", x) : replies[0] = replies[0].toString().replace("xxxxx", x);
+    if (texts.length === 0) setTimeout(message, 2500);
+    texts.splice(0, 0, replies[0]);
+    replies.splice(0, 1);
+  }, 2000);
+}
 ```
 
-## Screenshot
+## Screenshots
 
-![screenshot](./assets/ss1.png)
+### Mobile
+![Mobile](./assets/ss1.png)
+
+### Desktop
+![Desktop](./assets/ss2.png)
+
+### Stats Page
+![Stats Page](./assets/ss3.png)
 
 ## License
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)

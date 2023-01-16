@@ -20,7 +20,7 @@
     `<span><a href="https://snake-vanilla-js-canvas.netlify.app/" target="_blank">Snake</a> 🔗❔</span>`,
     `Make a <span><a href="https://qr-code-styler.netlify.app/" target="_blank">QR code</a> for your WiFi/Event/etc...?`,
     `Or grab a free <span><a href="https://mlorberdev-generative-art.netlify.app/" target="_blank">digital art masterpiece?</a> Maybe for a background ...`,
-    `You can check out these &mdash; and my other work &mdash; on <a href="https://github.com/mlorberdev" target="_blank">Github</a>` +
+    `You can check out these - and my other work - on <a href="https://github.com/mlorberdev" target="_blank">Github</a>` +
     ` and <a href="https://codepen.io/mlorberdev" target="_blank">Codepen</a> 😎`,
     `...find me on <a href="https://www.linkedin.com/in/matthew-lorber" target="_blank">LinkedIn</a>...`,
     `...and have a quick look at my <a href="./stats.html" target="_blank">stats</a> page while you're here?`,
