@@ -170,7 +170,9 @@ footer {
 .hide {
   display: none;
 }
-
+#mic > g {
+  fill: #666;
+}
 /* SCROLLING ELEMENT */
 #screen {
   position: fixed;
