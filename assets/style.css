@@ -44,8 +44,9 @@ body {
 
 #index_main {
   width: var(--ww);
-  height: -moz-fit-content;
-  height: fit-content;
+  
+  height: max-content;
+
 }
 
 
@@ -56,8 +57,9 @@ header {
   top: 0;
   left: 0;
   width: var(--ww);
-  height: -moz-fit-content;
-  height: fit-content;
+  
+  height: max-content;
+
   justify-content: end;
   margin-right: 1rem;
   font-size: .6rem;
@@ -114,8 +116,9 @@ footer {
   justify-content: center;
   width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  
+  height: max-content;
+
   padding-right: 5px;
 }
 
@@ -170,17 +173,20 @@ footer {
 .hide {
   display: none;
 }
-#mic > g {
+
+#mic>g {
   fill: #666;
 }
+
 /* SCROLLING ELEMENT */
 #screen {
   position: fixed;
   bottom: 15%;
   width: 95%;
-  height: -moz-fit-content;
-  height: fit-content;
-  min-height:1px;
+  
+  height: max-content;
+
+  min-height: 1px;
   max-height: 82%;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -193,7 +199,7 @@ footer {
 ::-webkit-scrollbar {
   display: none;
   -ms-overflow-style: none;
-  scrollbar-width: none;
+  width: 0px;
 }
 
 /* INPUT TYPE TEXT */
@@ -252,14 +258,16 @@ footer {
 #mms-connect {
   display: flex;
   flex-direction: row;
-  height: -moz-fit-content;
-  height: fit-content;
+  
+  height: max-content;
+
   padding-left: 1rem;
 }
 
 #mms-marker {
-  height: -moz-fit-content;
-  height: fit-content;
+  
+  height: max-content;
+
   position: absolute;
   bottom: 7.5vh;
   display: flex;
@@ -356,16 +364,18 @@ a:visited {
   right: 0;
   width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  
+  height: max-content;
+
 }
 
 #down {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
+  
+  height: max-content;
+
   z-index: 0;
   transition: bottom .2s linear;
 }

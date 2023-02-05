@@ -15,8 +15,8 @@
   const texts = [
     `Hi👋 It's Matt<br>How are you 🤔`,
     `Since you're here, want to play a game? 🕹️👾🎮`,
-    `<span><a href="https://wrdl-with-restful-api.netlify.app/" target="_blank">Wordle<sup>TM</sup> Clone </a></span><br>` +
-    `<span><a href="https://minesweeper-clone-jquery.netlify.app/" target="_blank">Minesweeper</a></span><br>` +
+    `<span><a href="https://wrdl-with-restful-api.netlify.app/" target="_blank">Wordle<sup>TM</sup> Clone</a> </span> ` +
+    `<span><a href="https://minesweeper-clone-jquery.netlify.app/" target="_blank">Minesweeper</a> </span> ` +
     `<span><a href="https://snake-vanilla-js-canvas.netlify.app/" target="_blank">Snake</a> 🔗❔</span>`,
     `Make a <span><a href="https://qr-code-styler.netlify.app/" target="_blank">QR code</a> for your WiFi/Event/etc...?`,
     `Or grab a free <span><a href="https://mlorberdev-generative-art.netlify.app/" target="_blank">digital art masterpiece?</a>`,
