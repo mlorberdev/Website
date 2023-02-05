@@ -382,7 +382,7 @@ body::after {
   border-top-left-radius: 5px;
 }
 
-@media only screen and (min-width: 450px) {
+/* @media only screen and (min-width: 450px) {
   :root {
     --ww: 350px;
   }
@@ -390,4 +390,4 @@ body::after {
   body {
     left: calc((100vw - 440px)/2);
   }
-}
+} */
