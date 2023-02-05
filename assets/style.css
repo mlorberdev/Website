@@ -32,6 +32,10 @@ html {
   background-image: url(./wood.webp);
   background-size: cover;
   width: 100vw;
+  height:100vh;
+  position:fixed;
+  top:0;
+  left:0;
 }
 
 body {
@@ -39,15 +43,6 @@ body {
   width: var(--ww);
 }
 
-@media only screen and (min-width: 450px) {
-  :root {
-    --ww: 350px;
-  }
-
-  body {
-    left: calc((100vw - 440px)/2);
-  }
-}
 
 /* TIME, BATTERY, SIGNAL */
 header {
@@ -385,4 +380,14 @@ body::after {
   left: -10px;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 5px;
+}
+
+@media only screen and (min-width: 450px) {
+  :root {
+    --ww: 350px;
+  }
+
+  body {
+    left: calc((100vw - 440px)/2);
+  }
 }
