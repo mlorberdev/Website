@@ -168,11 +168,11 @@ footer {
 
 /* SCROLLING ELEMENT */
 #screen {
-  position:absolute;
-  bottom:15vh;
+  position:fixed;
+  bottom:15%;
   width: 95%;
   height: fit-content;
-  max-height: 82vh;
+  max-height: 82%;
   overflow-x: hidden;
   overflow-y: scroll;
   margin: 0 2.5%;
