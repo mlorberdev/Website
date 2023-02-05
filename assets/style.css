@@ -44,6 +44,7 @@ body {
 
 #index_main {
   width: var(--ww);
+  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -55,6 +56,7 @@ header {
   top: 0;
   left: 0;
   width: var(--ww);
+  height: -moz-fit-content;
   height: fit-content;
   justify-content: end;
   margin-right: 1rem;
@@ -110,7 +112,9 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   padding-right: 5px;
 }
@@ -172,6 +176,7 @@ footer {
   position: fixed;
   bottom: 15%;
   width: 95%;
+  height: -moz-fit-content;
   height: fit-content;
   min-height:1px;
   max-height: 82%;
@@ -219,10 +224,12 @@ footer {
   position: relative;
   left: 4.5rem;
   font-size: .6rem;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
 .now.left {
+  width: -moz-fit-content;
   width: fit-content;
   padding-left: calc(100% - 3rem);
   left: unset;
@@ -243,11 +250,13 @@ footer {
 #mms-connect {
   display: flex;
   flex-direction: row;
+  height: -moz-fit-content;
   height: fit-content;
   padding-left: 1rem;
 }
 
 #mms-marker {
+  height: -moz-fit-content;
   height: fit-content;
   position: absolute;
   bottom: 7.5vh;
@@ -306,6 +315,7 @@ footer {
   border-top-right-radius: 24px;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
+  width: -moz-fit-content;
   width: fit-content;
   margin-left: .7rem;
 }
@@ -342,7 +352,9 @@ a:visited {
   position: fixed;
   top: 0;
   right: 0;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -350,6 +362,7 @@ a:visited {
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   z-index: 0;
   transition: bottom .2s linear;
@@ -396,5 +409,9 @@ body::after {
 
   body {
     left: 10vw;
+  }
+
+  #screen {
+    width: calc(var(--ww) - 5%);
   }
 }
