@@ -14,20 +14,20 @@
   // replies to input (from replies array) get spliced into index 0 in texts array to send on next int
   const texts = [
     `Hi👋 It's Matt<br>How are you 🤔`,
-    `Want to play a game? 🕹️👾🎮`,
+    `Since you're here, want to play a game? 🕹️👾🎮`,
     `<span><a href="https://wrdl-with-restful-api.netlify.app/" target="_blank">Wordle<sup>TM</sup> Clone </a></span><br>` +
     `<span><a href="https://minesweeper-clone-jquery.netlify.app/" target="_blank">Minesweeper</a></span><br>` +
     `<span><a href="https://snake-vanilla-js-canvas.netlify.app/" target="_blank">Snake</a> 🔗❔</span>`,
     `Make a <span><a href="https://qr-code-styler.netlify.app/" target="_blank">QR code</a> for your WiFi/Event/etc...?`,
-    `Or grab a free <span><a href="https://mlorberdev-generative-art.netlify.app/" target="_blank">digital art masterpiece?</a> Maybe for a background ...`,
+    `Or grab a free <span><a href="https://mlorberdev-generative-art.netlify.app/" target="_blank">digital art masterpiece?</a>`,
     `You can check out these - and my other work - on <a href="https://github.com/mlorberdev" target="_blank">Github</a>` +
     ` and <a href="https://codepen.io/mlorberdev" target="_blank">Codepen</a> 😎`,
     `...find me on <a href="https://www.linkedin.com/in/matthew-lorber" target="_blank">LinkedIn</a>...`,
     `...and have a quick look at my <a href="./stats.html" target="_blank">stats</a> page while you're here?`,
-    `Need a simple static site or a dynamic web app,`,
-    `built on React Native, count on me!`,
+    `Need a simple static site or a dynamic web app built on React Native,`,
+    `You can count on me 💯 !`,
     `<a href="mailto:mlorber.dev@gmail.com">Email</a> 🫱‍🫲🏾 me if you'd like to chat!`,
-    `Glad you stopped by 💯! Let's get together on something soon!`
+    `Glad you stopped by! Let's get together on something soon!`
   ];
   // replies to user input
   // each is spliced into texts array for send on next int, then is spliced out of replies
