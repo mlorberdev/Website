@@ -18,6 +18,7 @@
   --black: black;
   --ww: 100vw;
 }
+
 html {
   background-image: url(./wood.webp);
   background-size: cover;
@@ -26,7 +27,7 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  margin:0;
+  margin: 0;
   overflow: hidden;
 }
 
@@ -42,8 +43,8 @@ body {
 }
 
 #index_main {
-  width:var(--ww);
-  height:fit-content;
+  width: var(--ww);
+  height: fit-content;
 }
 
 
@@ -59,7 +60,7 @@ header {
   margin-right: 1rem;
   font-size: .6rem;
   color: #ccc;
-  padding:3px;
+  padding: 3px;
 }
 
 header>svg {
@@ -168,16 +169,17 @@ footer {
 
 /* SCROLLING ELEMENT */
 #screen {
-  position:fixed;
-  bottom:15%;
+  position: fixed;
+  bottom: 15%;
   width: 95%;
   height: fit-content;
+  min-height:1px;
   max-height: 82%;
   overflow-x: hidden;
   overflow-y: scroll;
   margin: 0 2.5%;
-  transition: all .5s linear;
-  z-index:10;
+  /* transition: all .5s linear; */
+  z-index: 10;
 }
 
 /* HIDE SCROLLBARS */
@@ -217,12 +219,13 @@ footer {
   position: relative;
   left: 4.5rem;
   font-size: .6rem;
-  width:fit-content;
+  width: fit-content;
 }
+
 .now.left {
-  width:fit-content;
-  padding-left:calc(100% - 3rem);
-  left:unset;
+  width: fit-content;
+  padding-left: calc(100% - 3rem);
+  left: unset;
   /* right:0; */
 }
 
@@ -299,10 +302,10 @@ footer {
   background-color: #222;
   color: var(--white);
   padding: 1rem;
-  border-top-left-radius:24px;
-  border-top-right-radius:24px;
-  border-bottom-left-radius:24px;
-  border-bottom-right-radius:24px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
   width: fit-content;
   margin-left: .7rem;
 }
@@ -344,12 +347,12 @@ a:visited {
 }
 
 #down {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: fit-content;
   z-index: 0;
-  transition:bottom .2s linear;
+  transition: bottom .2s linear;
 }
 
 .down_wrap {
@@ -364,7 +367,7 @@ a:visited {
 body::before,
 body::after {
   content: " ";
-  height: 100vh;
+  height: 100%;
   position: absolute;
   top: 0;
   width: 15px;
