@@ -25,7 +25,7 @@
     `...find me on <a href="https://www.linkedin.com/in/matthew-lorber" target="_blank">LinkedIn</a>...`,
     `...and have a quick look at my <a href="./stats.html" target="_blank">stats</a> page while you're here?`,
     `Need a simple static site or a dynamic web app built on React Native,`,
-    `You can count on me 💯 !`,
+    `You can count on me 💯`,
     `<a href="mailto:mlorber.dev@gmail.com">Email</a> 🫱‍🫲🏾 me if you'd like to chat!`,
     `Glad you stopped by! Let's get together on something soon!`
   ];
@@ -33,10 +33,10 @@
   // each is spliced into texts array for send on next int, then is spliced out of replies
   // if replies.length is 0, sends the same reply to all subsequent user inputs (below)
   const replies = [
-    `*xxxxx! 😁 I have no idea what you're saying 🤪`,
     `*✨xxxxx✨`,
     `*🎉🎉xxxxx🎉🎉`,
     `*xxxxx seriously 🧊 `,
+    `*xxxxx! 😁 I have no idea what you're saying 🤪`,
     `*xxxxx ⭐⭐⭐`,
   ];
 

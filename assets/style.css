@@ -18,6 +18,15 @@
   --black: black;
   --ww: 100vw;
 }
+html {
+  background-image: url(./wood.webp);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
 body {
   position: fixed;
@@ -25,23 +34,10 @@ body {
   left: 0;
   margin: 0;
   height: 100vh;
-  
-}
-
-html {
-  background-image: url(./wood.webp);
-  background-size: cover;
-  width: 100vw;
-  height:100vh;
-  position:fixed;
-  top:0;
-  left:0;
-}
-
-body {
   background-color: var(--black);
   width: var(--ww);
 }
+
 
 
 /* TIME, BATTERY, SIGNAL */
@@ -382,12 +378,12 @@ body::after {
   border-top-left-radius: 5px;
 }
 
-/* @media only screen and (min-width: 450px) {
+@media only screen and (min-width: 1024px) {
   :root {
-    --ww: 350px;
+    --ww: 80vw;
   }
 
   body {
-    left: calc((100vw - 440px)/2);
+    left: 10vw;
   }
-} */
+}
