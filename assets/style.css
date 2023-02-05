@@ -41,6 +41,7 @@ body {
 
 #index_main {
   width:var(--ww);
+  height:100vh;
 }
 
 
@@ -174,6 +175,7 @@ footer {
   overflow-y: scroll;
   margin: 0 2.5%;
   transition: all .5s linear;
+  z-index:10;
 }
 
 /* HIDE SCROLLBARS */
