@@ -22,7 +22,7 @@ html {
   background-image: url(./wood.webp);
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,12 +36,12 @@ body {
   margin: 0;
   background-color: var(--black);
   width: var(--ww);
-  height: 100vh;
+  height: 100%;
 }
 
 #index_main {
   width:var(--ww);
-  height:100vh;
+  height:100%;
 }
 
 
