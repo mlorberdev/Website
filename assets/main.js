@@ -24,7 +24,7 @@
     ` and <a href="https://codepen.io/mlorberdev" target="_blank">Codepen</a> 😎`,
     `...find me on <a href="https://www.linkedin.com/in/matthew-lorber" target="_blank">LinkedIn</a>...`,
     `...and have a quick look at my <a href="./stats.html" target="_blank">stats</a> page while you're here?`,
-    `Need a simple static site or a dynamic web app built on React Native,`,
+    `Need a single-page app or one built on React Native,`,
     `You can count on me 💯`,
     `<a href="mailto:mlorber.dev@gmail.com">Email</a> 🫱‍🫲🏾 me if you'd like to chat!`,
     `Glad you stopped by! Let's get together on something soon!`
